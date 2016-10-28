@@ -6,6 +6,7 @@ module PostAdmin
       object_label_method :title
 
       field :user_id, :enum do
+        visible false
         enum do
           # bindings is nil, so the following line does not work:
           # User.accessible_by(bindings[:controller].current_user).map { |user| [user.name, user.id] }
@@ -14,6 +15,7 @@ module PostAdmin
       end
 
       list do
+        filters [:user_id]
         field :id
         field :user do
           filterable false
