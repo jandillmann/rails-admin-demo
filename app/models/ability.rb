@@ -35,5 +35,7 @@ class Ability
     can :dashboard
 
     can :update, User, :id => user.id
+    can :manage, Post, :user_id => user.id
+    can :read, Post
   end
 end

@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    # NOOP
+    @posts = Post.all.order(created_at: :desc)
   end
 end
