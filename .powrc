@@ -1,0 +1,17 @@
+# Use .ruby-version and .ruby-gemset for Pow
+# See: https://gist.github.com/nbibler/5307941
+if [ -f "$rvm_path/scripts/rvm" ]; then
+  source "$rvm_path/scripts/rvm"
+
+  if [ -f ".rvmrc" ]; then
+    source ".rvmrc"
+  fi
+
+  if [ -f ".ruby-version" ]; then
+    rvm use `cat .ruby-version`
+  fi
+
+  if [ -f ".ruby-gemset" ]; then
+    rvm gemset use `cat .ruby-gemset` --create
+  fi
+fi
