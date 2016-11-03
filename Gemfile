@@ -37,7 +37,7 @@ gem 'devise-bootstrap-views'
 # gem 'capistrano-rails', group: :development
 
 # Admin framework
-gem 'rails_admin', '~> 1.0.0'
+gem 'rails_admin', '~> 1.1.0'
 
 # Authorization
 gem 'cancancan'
@@ -54,7 +54,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  # Better error page 
+  # Better error page
   gem 'better_errors'
   gem 'binding_of_caller'
 end
